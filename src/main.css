@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(15,15,15);
+}
+
+#t, #load {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#cokie {
+    width: 35%;
+    height: 649px;
+    background-color:blanchedalmond;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#left {
+    flex: 1;
+    width: 32%;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    background-image: url("./img/simple_dashed.png");
+    background-repeat: repeat;
+}
+
+.sl {
+    cursor: pointer;
+    border-radius: 5px;
+    border-width: 3px;
+    border-color: lightgrey; 
+    width: 100px;
+}
+
+.sl:hover {
+    background-color: lightgray;
+}
+
+.wd {
+    cursor: pointer;
+    border-radius: 5px;
+    border-width: 3px;
+    border-color: gray; 
+    background-color: darkred;
+    width: 100px;
+}
+
+.wd:hover {
+    background-color: red;
+}
+
+#upgrades {
+    color: white;
+}
+
+input {
+    color: black;
+}
+
+#lds {
+    overflow-y: auto;
+    background-image: url("./img/wood.png");
+    background-size: cover;
+    height: 78.7%;
+}
+
+#right {
+    width: 32%;
+    align-items: center;
+    height: 649px;
+    background-image: url("./img/wood2.jpg");
+    background-size: cover;
+}
+
+#upgrades {
+    background-color: rgb(15,15,15);
+    border-color: black;
+    border-style: solid;
+    border-width: 5px;
+    text-align: center;
+    padding: 5px;
+}
+
+.hidden {
+    display: none;
+}
+
+.beta {
+    display: none;
+}
+
