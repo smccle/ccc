@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <title>CatCoin Clicker</title>
+        <!-- <link rel="stylesheet" href="./src/particles/particles.css"> -->
+        <link rel="stylesheet" id="css" href="./src/main.css">
+        <!-- <script src="./lib/base64.js"></script> -->
+        <script src="./lib/jquery-3.6.0.min.js"></script>
+    </head>
+
+    <body id="body" onload="loadData(); generateNews(); setInterval(setData(createList()), 60000); setInterval(generateNews, 10000); setInterval(timer, 1000)")>
+        <h1 id="t">CatCoin Clicker</h1>
+        <noscript>Please Enable Javascript.</noscript>
+        <p id="load"></p>
+        <script>$("#load").text("Loading...")</script>
+        <script>$(window).on('load', function() {$("#game").css("display", "flex"); $("#t").text(""); $("#load").text("")})</script>
+        <div id="game" class="hidden">
+           <div id="cokie">
+            <img onclick="add()" id="cookie" src="./src/img/catcoin.png" style="width: 200px; height: 200px; user-select: none; -webkit-user-drag: none; z-index: 10; position: absolute; cursor: pointer;">
+            <img src="./src/img/cursorUp1.png" class="beta">
+           </div>
+           <br><br>
+           <div id="left">
+            <p onclick="generateNews()" style="cursor: default; user-select: none;" id="msg">"  "</p>
+            <br>
+            You got: <input type="text" id="text" disabled style="text-align: center;"> CatCoins.
+            <br><br>
+            And <input type="text" id="text2" disabled style="text-align: center;"> CCpS.
+            <br><br>
+            <button onclick="setData(createList())" class="sl">Save</button>
+            <button onclick="exportData(createList())" class="sl">Export</button>
+            <button onclick="importData()" class="sl">Import</button>
+            <button onclick="wipeData()" class="wd">Wipe Data</button>
+            <br>
+            <div id="lds"></div>
+           </div>
+           <div id="right">
+            <div id="upgrades">
+                <p id="up">Upgrades: </p>
+                <br><br>
+                <img src="./src/img/cursorUp1.png" title="Mouse Upgrade I - 25 CC" id='mu1' onclick="upgrade('mu1', 100, 'CCpC', 1)">
+            </div>
+           </div>
+        </div>
+        <script>
+            $(window).on('resize', function() {
+               if ($(window).width() >= 1366 && $(window).height() >= 649) {
+                  $("#game").css("display", "flex");
+                  $("#t").text("");
+                  $("#load").text("");
+                } else {
+                    $("#game").css("display", "none");
+                    $("#t").text("Uh-Oh!");
+                    $("#load").text("Please Resize your window.");
+                }
+            });
+        </script>
+        <script src="./src/main.js"></script>
+        <!-- <script src="./src/particles/particles.js"></script> -->
+        <script
+        src="./lib/gsap.min.js"></script>
+    </body>
+</html>
