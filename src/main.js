@@ -1,7 +1,7 @@
 /*
-All this code is copyright ZYTK, 2022.
+Copyright (c) 2022 ZYTK
    - Includes a bunch of snippets from sites like StackOverflow
-https://z1tk.github.io/
+https://zytkdev.github.io/
 */
 
 var VERSION=1.001;
